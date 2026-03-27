@@ -8,7 +8,7 @@ const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch
 
 dotenv.config();
 const app = express();
-app.use(cors());
+app.use(cors()); // Permissive CORS for mobile access
 app.use(express.json());
 
 const CREDITS_FILE = path.join(__dirname, 'credits.json');
